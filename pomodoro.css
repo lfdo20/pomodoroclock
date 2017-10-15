@@ -155,7 +155,7 @@ footer{
   bottom:0;
   z-index: 10;
 }
-footer h5{
+footer > h5{
   font-family: 'Open Sans', sans-serif ;
   color: #d8dccd;
   letter-spacing: 1.5px;
@@ -171,7 +171,7 @@ footer h5{
   }
 
   header{
-    width: 400px;
+    width: auto;
     margin: 0 auto;
   }
 
@@ -182,6 +182,10 @@ footer h5{
     letter-spacing: 2px;
     margin: 0px 0;
     margin-bottom: -15px;
+  }
+
+  h5{
+    font-size: 12px;
   }
 
   .box{
@@ -226,11 +230,26 @@ footer h5{
   .offset{
     position: relative;
     background-color: rgba(255,255,255, 0.1);
-    margin: 0 auto ;
+    margin: 0 auto;
     transform: translateY(-30px);
     width: 280px;
     height: 240px;
     border-radius: 50%;
+  }
+
+  footer{
+    text-align: center;
+    position:fixed;
+    width: 100%;
+    bottom: 5px;
+    z-index: 10;
+  }
+
+  footer > h5{
+    font-family: 'Open Sans', sans-serif ;
+    color: #d8dccd;
+    letter-spacing: 1.5px;
+    margin: 0 auto;
   }
 
 }
