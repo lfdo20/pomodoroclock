@@ -1,7 +1,7 @@
 $('document').ready(function(){
 
-  var pause = 5;
-  var work = 25;
+  var pause = 1;
+  var work = 1;
   var loop = 1;
   var looprb = 1;
   var oldwork=0;
@@ -9,6 +9,26 @@ $('document').ready(function(){
   var timer =0;
 
 
+// notification setup
+  var nw = new Audio('served.mp3');
+  var np = new Audio('newmessage.mp3');
+
+  Notification.requestPermission();
+
+  function notificationWork(theBody, theTitle) {
+    var options = { body: theBody, }
+    var nw = new Notification(theTitle, options);
+  setTimeout(nw.close.bind(nw), 6000);
+}
+
+function notificationPause(theBody, theTitle) {
+  var options = { body: theBody, }
+  var np = new Notification(theTitle, options);
+setTimeout(np.close.bind(np), 6000);
+}
+
+
+// click selection
   $(".display").click(function() {
       if (loop ===1){
         loop=0;
@@ -38,7 +58,7 @@ $('document').ready(function(){
       console.log(loop);
     });
 
-
+// time setting
     if (loop === 1){
 
       $(".pauseup").click(function(){
@@ -67,7 +87,7 @@ $('document').ready(function(){
 
     }
 
-
+// work function
 function runwork(){
   timer = new Timer();
   var spin=0;
@@ -90,13 +110,15 @@ function runwork(){
         $(".clock").css({'borderColor' : '#ad2a47'});
         looprb = 0;
         console.log('Fim trabalho'+looprb);
+        notificationPause('Ok, finally relax!', 'Pomodoro Clock');
+        np.play();
         timer.stop();
         timer =0;
         runpause();
     });
   };
 
-
+//pause function
 function runpause(){
   timer = new Timer();
   var spin=0;
@@ -119,29 +141,11 @@ function runpause(){
         $(".clock").css({'borderColor' : 'green'});
         looprb = 1;
         console.log('Fim descanso'+looprb);
+        notificationWork('Get back to work man!', 'Pomodoro Clock');
+        nw.play();
         timer.stop();
         timer=0;
         runwork();
     });
   };
-
-
-/*
-  console.log(work);
-  var date = new Date(new Date().valueOf() + work * 60 * 1000);
-  console.log(date);
-  $('.counter').countdown(date, function(event) {
-    $(this).html(event.strftime('%M:%S'));
-  });
-
-  console.log(pause);
-  var date = new Date(new Date().valueOf() + pause * 60 * 1000);
-  console.log(date);
-  $('.counter').countdown(date, function(event) {
-    $(this).html(event.strftime('%M:%S'));
-  });
-} while (loop ===1);
-
-*/
-
 });
