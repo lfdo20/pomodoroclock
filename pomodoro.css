@@ -10,16 +10,7 @@ body{
   height: 100%;
 }
 
-.arrow{
-  background-color: yellow;
-  margin: 0 auto;
-  margin-top: 200px;
-  width: 160px;
-  height: 160px;
-  transform: rotate(45deg);
-  display: none;
 
-}
 
 .arrow2{
   position: relative;
@@ -169,4 +160,77 @@ footer h5{
   color: #d8dccd;
   letter-spacing: 1.5px;
   margin: 5px 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+  body{
+    background-color: #0D233E;
+    width: 0 auto;
+
+  }
+
+  header{
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  header > h1{
+    font-family: 'Pacifico', cursive;
+    color: #d8dccd;
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin: 0px 0;
+    margin-bottom: -15px;
+  }
+
+  .box{
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 400px;
+    height: 400px;
+  }
+
+  .arrow2{
+    position: relative;
+    background-color: #0D233E;
+    color:#d28521;
+    margin: 0 auto;
+    font-size: 90px;
+    line-height: 40px;
+    width: 395px;
+    height: 395px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 6px;
+    border-color: #0D233E;
+    text-align: center;
+    z-index: -2;
+  }
+
+  .clock{
+    position: relative;
+    margin: 0 auto;
+    margin-top: -360px;
+    background-color: #d28521;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 6px;
+    border-color:  #0D233E;
+    overflow: hidden;
+
+  }
+
+  .offset{
+    position: relative;
+    background-color: rgba(255,255,255, 0.1);
+    margin: 0 auto ;
+    transform: translateY(-30px);
+    width: 280px;
+    height: 240px;
+    border-radius: 50%;
+  }
+
 }

@@ -1,7 +1,7 @@
 $('document').ready(function(){
 
   var pause = 1;
-  var work = 1;
+  var work = 25;
   var loop = 1;
   var looprb = 1;
   var oldwork=0;
