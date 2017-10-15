@@ -1,5 +1,13 @@
 body{
-  background-color: gray;
+  background-color: #0D233E;
+  height: 100%;
+  min-height: 100%;
+
+}
+
+.box{
+  margin-top: 150px;
+  height: 100%;
 }
 
 .arrow{
@@ -9,26 +17,61 @@ body{
   width: 160px;
   height: 160px;
   transform: rotate(45deg);
+  display: none;
 
 }
 
+.arrow2{
+  position: relative;
+  background-color: #0D233E;
+  color:#d28521;
+  margin: 0 auto;
+  font-size: 90px;
+  line-height: 40px;
+  width: 395px;
+  height: 395px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 6px;
+  border-color: #0D233E;
+  text-align: center;
+  z-index: -2;
+}
+/*
+.arrow2{
+  position: relative;
+  background-color: blue;
+  margin: 0 auto;
+  font-size: 360px;
+  line-height: 410px;
+  width: 395px;
+  height: 395px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 6px;
+  border-color: gray;
+  text-align: center;
+  z-index: -2;
+}
+*/
 .clock{
   position: relative;
   margin: 0 auto;
-  margin-top: -131px;
-  background-color: green;
+  margin-top: -360px;
+  background-color: #d28521;
   width: 300px;
   height: 300px;
   border-radius: 50%;
   border-style: solid;
   border-width: 6px;
-  border-color: gray;
+  border-color:  #0D233E;
   overflow: hidden;
+
 }
 
 .offset{
   position: relative;
-  background-color: rgba(255,255,255, 0.2);
+  background-color: rgba(255,255,255, 0.1);
   margin: 0 auto ;
   transform: translateY(-30px);
   width: 280px;
@@ -45,21 +88,25 @@ body{
   transform: translateY(-60px);
   text-align: center;
 
+
 }
 
 .set > h1{
   font-family: 'Open Sans', sans-serif;
+  color: #d8dccd;
   font-size: 44px;
   margin: 0 auto;
 }
 
 .setter > div{
   float: left;
-  padding: 20px;
+  padding: 20px 30px ;
+  color: #d8dccd;
 }
 
-i{
+.fa-2x{
   cursor: pointer;
+
 }
 
 .display{
@@ -70,12 +117,13 @@ i{
   text-align: center;
   margin-top: -72px;
   text-align: center;
-  padding-left: 8px;
+  padding-left: 5px;
   cursor: pointer;
 }
 
 .display > h1{
   font-family: 'Open Sans', sans-serif;
+  color: #d8dccd;
   font-size: 54px;
   text-align: center;
   letter-spacing: 5px;
@@ -85,4 +133,40 @@ i{
 
 .hide{
   display: none;
+}
+
+h5{
+  font-family: 'Open Sans', sans-serif ;
+  color: #d8dccd;
+  letter-spacing: 1.5px;
+  margin: 2px 0;
+}
+header{
+  text-align: center;
+  position:relative;
+  width: 100%;
+  top:10px;
+  z-index: 10;
+}
+header > h1{
+  font-family: 'Pacifico', cursive;
+  color: #d8dccd;
+  font-size: 85px;
+  letter-spacing: 2px;
+  margin: 0px 0;
+  margin-bottom: -15px;
+}
+
+footer{
+  text-align: center;
+  position:fixed;
+  width: 100%;
+  bottom:0;
+  z-index: 10;
+}
+footer h5{
+  font-family: 'Open Sans', sans-serif ;
+  color: #d8dccd;
+  letter-spacing: 1.5px;
+  margin: 5px 0;
 }
